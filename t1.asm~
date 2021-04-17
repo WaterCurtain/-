@@ -1,0 +1,23 @@
+assume cs:code
+
+code segmemt
+	
+	mov ax,2000H
+	mov ds,ax
+	mov bx,1000H
+	
+	mov dl,0BEH
+	mov ds:[bx],dl
+
+	mov ax,ds:[bx]
+	inc bx
+	inc bx
+
+
+	mov ax,4c00H
+	int 21H
+
+code ends
+
+end
+
